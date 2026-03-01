@@ -21,6 +21,7 @@ const PROMPT = `Act as an expert Digital Logic and FPGA Engineer.
 5. Use standard naming convention (e.g., module circuit_top (input a, input b, output y);) and ensure the code is well-formatted and commented for clarity.
 6. IMPORTANT: Output ONLY the Verilog code block. Do not include explanations, greetings, or markdown formatting outside the code block.`;
 
+app.use(express.static('public'));
 app.post('/api/synthesize', async (req, res) => {
   try {
     const { imageBase64, mimeType } = req.body;
